@@ -1,0 +1,41 @@
+
+<h2>Student Registration</h2>
+
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+
+    <h3>Personal Details</h3>
+    {{ form.full_name.label }}: {{ form.full_name }} <br><br>
+    {{ form.email.label }}: {{ form.email }} <br><br>
+    {{ form.mobile.label }}: {{ form.mobile }} <br><br>
+    {{ form.dob.label }}: {{ form.dob }} <br><br>
+    {{ form.gender.label }}: {{ form.gender }} <br><br>
+
+    <h3>Academic Details</h3>
+    {{ form.department.label }}: {{ form.department }} <br><br>
+    {{ form.year.label }}: {{ form.year }} <br><br>
+    {{ form.roll_number.label }}: {{ form.roll_number }} <br><br>
+
+    <h3>Skills</h3>
+    {{ form.skills.label }}: <br>
+    {{ form.skills }} <br><br>
+
+    <h3>Address Details</h3>
+    {{ form.address.label }}: {{ form.address }} <br><br>
+    {{ form.state.label }}: {{ form.state }} <br><br>
+    {{ form.pincode.label }}: {{ form.pincode }} <br><br>
+
+    <h3>Learning Mode</h3>
+    {{ form.learning_mode.label }}: {{ form.learning_mode }} <br><br>
+
+    <h3>Additional Info</h3>
+    {{ form.resume.label }}: {{ form.resume }} <br><br>
+    {{ form.about.label }}: {{ form.about }} <br><br>
+
+    <label>
+        {{ form.agree_terms }} I agree to all terms and conditions
+    </label>
+    <br><br>
+
+    <button type="submit">Submit</button>
+</form>
