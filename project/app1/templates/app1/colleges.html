@@ -1,0 +1,16 @@
+{% extends 'app1/base.html' %}
+
+
+{% block content %}
+<h2>Colleges</h2>
+
+<ul>
+    {% for college in colleges %}
+        <li>
+            <a href="/colleges/{{ college.slug }}/">
+                {{ college.name }}
+            </a>
+        </li>
+    {% endfor %}
+</ul>
+{% endblock %}
